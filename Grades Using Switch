@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int marks;
+    cout << " Please Enter Your Full Name " << endl;
+    string name;
+    getline ( cin , name );
+    cout << " Please Enter Your Marks Between 0-100 to check the grade  " << endl;
+    cin >> marks;
+    if (cin.fail())
+    {
+        cin.clear();
+        cin.ignore();
+        cout << " Incorrect Command Entered " << endl;
+        
+    }
+    else if ( marks > 100 )
+    {
+    cout << " Please Enter Marks Within Limit " << endl;
+    }
+    else 
+    {
+        switch ( marks / 10 )
+        {
+            case 10:
+            case 9:
+            case 8:
+            cout << name << " Your Grade Is A " << endl;
+            break;
+        
+            {
+                case 7:
+                cout << name << " Your Grade Is B " << endl;
+                break;
+            
+                {
+                    case 6:
+                    cout << name << " Your Grade Is C " << endl;
+                    break;
+                
+                    {
+                        case 5:
+                        cout << name << " Your Grade Is D" << endl;
+                        break;
+                    
+                        { 
+                            case 4:
+                            cout << name << " Your Grade Is E " << endl;
+                            break;
+                        
+                        default:
+                        {
+                            cout << name << " You Failed" << endl;
+                        }}}}}}
+}}
